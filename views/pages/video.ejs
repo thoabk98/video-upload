@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>eps1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">HomePage</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <video src="/video/episode<%=currEp%>.mp4" width="640" height="480" controls>
+        <track default kind="subtitles" srclang="en" src="/vtt/episode<%=currEp%>.vtt"/>
+</video
+</body>
+
+
+<!-- <script>
+    function myFunction(video, sub) {
+        var url = document.URL;
+        //var currEp = url[url.length - 1];
+        var x = document.createElement("VIDEO");
+        x.setAttribute("class", "py-5");
+        if (x.canPlayType("video/mp4")) {
+            x.setAttribute("src", video);
+            // x.setAttribute("src", "/video/upc-tobymanley.theora.ogg");
+        } else {
+            x.setAttribute("src", video);
+            //x.setAttribute("src", "/video/upc-tobymanley.theora.ogg");
+        }
+        x.setAttribute("width", "640");
+        x.setAttribute("height", "480");
+        x.setAttribute("controls", "controls");
+        document.body.appendChild(x);
+        var a = document.createElement("track");
+        a.setAttribute("lable", "english");
+        a.setAttribute("kind", "subtitles");
+        a.setAttribute("src", sub);
+        //a.setAttribute("src", "/vtt/sub.vtt");
+        //a.setAttribute("default");
+        x.appendChild(a);
+        console.log(a);
+    }
+    myFunction();
+</script> -->
+
+</html>
