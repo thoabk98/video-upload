@@ -19,39 +19,23 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
-    <video src="/video/episode<%=currEp%>.mp4" width="640" height="480" controls>
-        <track default kind="subtitles" srclang="en" src="/vtt/episode<%=currEp%>.vtt"/>
-</video
+
+    <div class="card py-5">
+        <video src="<%=link%>" width="640" height="480" controls>
+                <track default kind="subtitles" srclang="en" src="<%=link_sub%>"/>
+                </video>
+        <div class="card-body">
+            <h5 class="card-title">Title:
+                <%=title%>
+            </h5>
+            <p class="card-text">Up load by:
+
+                <%=useID%>
+
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
 </body>
-
-
-<!-- <script>
-    function myFunction(video, sub) {
-        var url = document.URL;
-        //var currEp = url[url.length - 1];
-        var x = document.createElement("VIDEO");
-        x.setAttribute("class", "py-5");
-        if (x.canPlayType("video/mp4")) {
-            x.setAttribute("src", video);
-            // x.setAttribute("src", "/video/upc-tobymanley.theora.ogg");
-        } else {
-            x.setAttribute("src", video);
-            //x.setAttribute("src", "/video/upc-tobymanley.theora.ogg");
-        }
-        x.setAttribute("width", "640");
-        x.setAttribute("height", "480");
-        x.setAttribute("controls", "controls");
-        document.body.appendChild(x);
-        var a = document.createElement("track");
-        a.setAttribute("lable", "english");
-        a.setAttribute("kind", "subtitles");
-        a.setAttribute("src", sub);
-        //a.setAttribute("src", "/vtt/sub.vtt");
-        //a.setAttribute("default");
-        x.appendChild(a);
-        console.log(a);
-    }
-    myFunction();
-</script> -->
 
 </html>

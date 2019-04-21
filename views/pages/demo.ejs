@@ -20,19 +20,38 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
-    <div class="py-5" style="width: 18rem;">
+    <div class="py-5" style="width: 36rem">
         <div class="card-header">
-            EPISODE
+            List film
         </div>
-        <% videos.forEach(function(item){  %>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <a href="/ep/<%= item %>" id="<%= item %>">Episode <%= item %></a>
-                </li>
-            </ul>
-            <% })%>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% videos.forEach(function(item){  %>
+                    <tr scope="row">
+                        <td>
+                            <%= item.movie_id %>
+                        </td>
+                        <td>
+                            <a href="/ep/<%= item.movie_id %>" id="<%= item.movie_id %>">
+                                <%= item.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <% })%>
+            </tbody>
+        </table>
+
     </div>
     <!-- <button onclick="myFunction()">Try it</button> -->
+    <button type="button" class="btn btn-primary btn-lg btn-block">
+        <a href="/upload" style="color: white">Upload</a>
+    </button>
 </body>
 
 
